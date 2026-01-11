@@ -60,6 +60,9 @@ if (TARGET tinyusb_device)
     pico_enable_stdio_usb(PicoSlave 1)
     pico_enable_stdio_uart(PicoSlave 0)
 
+    # Run from RAM
+    pico_set_binary_type(PicoSlave copy_to_ram)
+
     # create map/bin/hex/uf2 file etc.
     pico_add_extra_outputs(PicoSlave)
 

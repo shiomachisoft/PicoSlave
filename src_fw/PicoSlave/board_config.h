@@ -26,10 +26,10 @@
 // -----------------------------------------------------------------------------
 // SPI (Slave Mode) Configuration
 // -----------------------------------------------------------------------------
-#define SPI_RX_PIN          16              // RX (MISO) pin (GP16)
+#define SPI_RX_PIN          16              // RX pin (GP16)
 #define SPI_CSN_PIN         17              // CSn (Chip Select) pin (GP17)
 #define SPI_SCK_PIN         18              // SCK pin (GP18)
-#define SPI_TX_PIN          19              // TX (MOSI) pin (GP19)
+#define SPI_TX_PIN          19              // TX pin (GP19)
 #define SPI_CPOL            SPI_CPOL_1      // Clock polarity
 #define SPI_CPHA            SPI_CPHA_1      // Clock phase
 #define SPI_DATA_BITS       8               // Data bits

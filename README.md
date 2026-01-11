@@ -57,9 +57,11 @@ If you want to change these settings or pin assignments, please edit `board_conf
 *   **Reason**: While standard SPI allows sending multiple bytes continuously by keeping CS Low and sending clocks (SCLK), the RP2040 (Pico) SPI slave has the following specific limitation:
     * "Per-frame" CS toggle requirement (CPHA=0):
      Due to the specification of the SPI controller on the RP2040, when operating in SPI mode 0 or 2 (CPHA=0), the master must return CS to High once after sending 1 data unit (1 byte or 1 word) for the next data to be received correctly (or to maintain synchronization).
-!image.png    
-       * Standard expectation: Receive 10 bytes by sending 8 clocks x 10 times while keeping CS Low.
-       * Pico (Slave) reality: If clocks continue while CS is Low, it may fail to recognize the end timing of the 1st data correctly, causing sampling shifts for the 2nd data onwards or failure to store in FIFO properly.
+
+<img width="789" height="212" alt="image" src="https://github.com/user-attachments/assets/0ded836d-8784-46d6-9e45-81a67db0db69" />
+
+* Standard expectation: Receive 10 bytes by sending 8 clocks x 10 times while keeping CS Low.
+* Pico (Slave) reality: If clocks continue while CS is Low, it may fail to recognize the end timing of the 1st data correctly, causing sampling shifts for the 2nd data onwards or failure to store in FIFO properly.
 :::
 
 ### PWM

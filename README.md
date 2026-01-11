@@ -72,9 +72,12 @@ The default settings for each function are as follows.
 4.  Send data from the master device of each interface (UART, I2C, SPI) to PicoSlave to check the operation. Refer to "Functional Overview" for the content of the data returned by PicoSlave.
 
 ## Memo
-The following description in CMakeLists.txt expands the entire program to RAM for high-speed execution.
-```cmake 
-pico_set_binary_type(PicoSlave copy_to_ram)
+> [!TIP]
+> The following configuration in `CMakeLists.txt` ensures the entire program is loaded into RAM for high-speed execution:
+>
+> ```cmake
+> pico_set_binary_type(PicoSlave copy_to_ram)
+> ```
 
 ## Disclaimer
 The author assumes no responsibility for any damages or troubles arising from the use of this software. Please use it at your own risk.

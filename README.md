@@ -33,9 +33,8 @@ The default pin configuration is defined in `board_config.h`.
 
 The default settings for each function are as follows.
 
-:::note
-If you want to change these settings or pin assignments, please edit `board_config.h`.
-:::
+**If you want to change these settings or pin assignments, please edit `board_config.h`.**
+
 
 ### UART
 *   **Baud Rate**: 9600 bps

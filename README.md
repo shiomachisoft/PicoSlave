@@ -66,6 +66,7 @@ The default settings for each function are as follows.
 ## Usage
 
 1.  First, perform the necessary wiring according to the function you want to use. Refer to the "Wiring (Pinout)" chapter for pin assignments.
+    **Keep the SPI wiring (especially the clock line: SCK) as short as possible.**   
 2.  Copy the `PicoSlave.uf2` file to the Pico (RPI-RP2 drive) connected to the PC via USB while holding down the BOOTSEL button.
     ⇒ After copying is complete, the Pico will automatically reboot and this firmware will start operating.
 3.  Open the Pico's COM port with serial monitor software such as TeraTerm, and the PWM measurement result log will be displayed at intervals of about 5 seconds. (Set the TeraTerm baud rate to 115200 bps for now.)
